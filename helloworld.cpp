@@ -1,8 +1,8 @@
+#include "header.h"
 #include <iostream>
 using namespace std;
+string name;
 void helloworld()
 {
-	string s;
-	cin >> s;
-	cout <<"Hello, " <<  s <<endl;
+	cout <<"Hello, " <<  name <<endl;
 }
