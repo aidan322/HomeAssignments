@@ -1,0 +1,8 @@
+project1: main.o helloworld.o
+	g++ helloworld.cpp main.cpp -o project
+main.o: main.cpp
+	g++ -c main.cpp 
+helloworld.o: helloworld.cpp
+	g++ -c helloworld.cpp
+clean: 
+	rm -rf *.o project
