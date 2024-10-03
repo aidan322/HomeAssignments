@@ -1,8 +1,12 @@
+// hello.cpp
+// implemenation of the helloworld function, which outputs a greeting with
+// the name
 #include "header.h"
 #include <iostream>
-using namespace std;
-string name;
+
+std::string name;
+
 void helloworld()
 {
-	cout <<"Hello, " <<  name <<endl;
+    std::cout <<"Hello, " <<  name << std::endl;
 }
