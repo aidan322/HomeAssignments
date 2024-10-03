@@ -1,10 +1,16 @@
+// main.cpp
+// the main function that outputs a greeting and asks for a name in a loop
 #include <iostream>
 #include "header.h"
-using namespace std;
-extern string name;
-int main(){
-	name = "world";
-	helloworld();
-	cin >> name;
-	helloworld();
+
+
+int main()
+{
+    name = "world";
+    helloworld();
+    while (true)
+    {
+    str::cin >> name;
+    helloworld();
+    }
 }
