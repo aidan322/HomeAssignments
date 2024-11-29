@@ -10,7 +10,11 @@ int main()
     helloworld();
     while (true)
     {
-    str::cin >> name;
-    helloworld();
+        std::cin >> name;
+        if (name == "stop")
+        {
+            break;
+        }
+        helloworld();
     }
 }
