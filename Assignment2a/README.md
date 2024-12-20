@@ -8,4 +8,4 @@ Home assignment 2a - reading and writing binary files
 ## Build
 make
 ## Run
-
+./project2
