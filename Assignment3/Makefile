@@ -1,20 +1,17 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17 -02
-LDFLAGS =
+CXXFLAGS = -std=c++11 -Wall
 
-SRCS = main.cpp transformer.cpp
-OBJS = $(SRCS:.CPP=.0)
-TARGET = transformer
+SRCS = main.cpp transformer.cpp autobot.cpp decepticon.cpp
+OBJS = $(SRCS:.cpp=.o)
+TARGET = transformers
 
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	 $(CXX) $(LDFLAGS) -o $@ $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(TARGET)
-
-.PHONY: all clean
