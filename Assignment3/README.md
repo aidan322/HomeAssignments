@@ -8,14 +8,16 @@ st133061@student.spbu.ru
 
 ## Description
 
-
+Assignment 3 - "Transformers" clas hierarchy.
 
 ## Build
 
-
+make
 
 ## Run
 
-
+./transformers
 
 ## Clean
+
+make clean

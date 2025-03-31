@@ -1,4 +1,3 @@
-// Decepticon.cpp
 #include "decepticon.h"
 #include <iostream>
 
