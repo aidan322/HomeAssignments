@@ -4,8 +4,7 @@
 #include <iostream>
 #include <string>
 
-class Transformer
-{
+class Transformer {
 protected:
     std::string name;
     int powerLevel;

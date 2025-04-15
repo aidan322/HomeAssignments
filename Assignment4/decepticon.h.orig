@@ -3,8 +3,7 @@
 
 #include "transformer.h"
 
-class Decepticon : public Transformer
-{
+class Decepticon : public Transformer {
 private:
     int evilness;
 public:
