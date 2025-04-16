@@ -10,6 +10,9 @@ private:
 public:
     Decepticon(std::string name, int powerLevel, int evilness);
     void transform() const override;
+    void ammo() const override;
+    void openFire() const override;
+    void ultimate() const override;
 };
 
 #endif // DECEPTICON_H

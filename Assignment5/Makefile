@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Werror -Wpedantic
+CXXFLAGS = -std=c++14 -Wall -Werror -Wpedantic
 OBJS = main.o transformer.o autobot.o decepticon.o
 TARGET = transformers
 
