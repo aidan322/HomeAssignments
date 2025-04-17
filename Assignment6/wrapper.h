@@ -17,3 +17,19 @@ public:
 };
 
 #endif // WRAPPER_H
+
+template<>
+class Wrapper<int> {
+public:
+    bool foo() {
+        return true;
+    }
+};
+
+template<>
+class Wrapper<double> {
+public:
+    bool foo() {
+        return false;
+    }
+};
