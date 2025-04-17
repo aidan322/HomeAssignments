@@ -21,6 +21,7 @@ public:
 template<>
 class Wrapper<int> {
 public:
+    Wrapper(int, int, std::vector<float>) {}
     bool foo() {
         return true;
     }
@@ -29,6 +30,7 @@ public:
 template<>
 class Wrapper<double> {
 public:
+    Wrapper(double, int, std::vector<float>) {}
     bool foo() {
         return false;
     }

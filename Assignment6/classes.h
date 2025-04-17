@@ -12,7 +12,7 @@ public:
     void c_1_3() {}
 };
 
-clas Class2 {
+class Class2 {
 public:
     bool bar(int, std::vector<float>& v) {
         return !v.empty();
@@ -26,6 +26,7 @@ class Class3 {
 public:
     bool bar(int x, std::vector<float>& v) {
         return x == -1 * static_cast<int>(v.size());
+    }
     int c_3_1() { return 9; }
     float c_3_2() { return 1.23f; }
     void c_3_3() {}
