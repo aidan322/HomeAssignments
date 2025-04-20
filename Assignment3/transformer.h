@@ -2,6 +2,7 @@
 #define TRANSFORMER_H
 
 #include <string>
+#include "extras.h"
 
 class Transformer {
 protected:
@@ -9,6 +10,8 @@ protected:
     std::string type;
     int powerLevel;
     bool isAutobot;
+    Weapon weapon;
+    Base* base = nullptr;
 
 public:
     Transformer(const std::string& name, const std::string& type, int powerLevel, bool isAutobot);
@@ -27,6 +30,8 @@ public:
     void setIsAutobot(bool newIsAutobot);
 
     virtual void transform() const;
+    void recharge();
+    void statusReport();
 };
 
 

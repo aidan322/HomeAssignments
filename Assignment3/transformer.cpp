@@ -1,6 +1,21 @@
 #include "transformer.h"
 #include <iostream>
 
+void Transformer::recharge() {
+    std::cout << name << " is recharging..." << std::endl;
+}
+
+void Transformer::statusReport() {
+    std::cout << name << "'s weapon: " << weapon.type
+              << " with damage: " << weapon.damage << std::endl;
+
+    if(base) {
+        std::cout << name << " is based at " << base->location << std::endl;
+    } else {
+        std::cout << name << " has no assigned base." << std::endl;
+    }
+}
+
 Transformer::Transformer(const std::string& name, const std::string& type, int powerLevel, bool isAutobot)
     : name(name), type(type), powerLevel(powerLevel), isAutobot(isAutobot) {}
 
