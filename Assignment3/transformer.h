@@ -30,8 +30,10 @@ public:
     void setIsAutobot(bool newIsAutobot);
 
     virtual void transform() const;
-    void recharge();
-    void statusReport();
+    virtual void recharge() const = 0;
+    virtual void statusReport() const = 0;
+    virtual void openFire() const = 0;
+    virtual void ultimate() const = 0;
 };
 
 

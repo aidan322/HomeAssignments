@@ -1,11 +1,11 @@
 #include "transformer.h"
 #include <iostream>
 
-void Transformer::recharge() {
+void Transformer::recharge() const {
     std::cout << name << " is recharging..." << std::endl;
 }
 
-void Transformer::statusReport() {
+void Transformer::statusReport() const {
     std::cout << name << "'s weapon: " << weapon.type
               << " with damage: " << weapon.damage << std::endl;
 
