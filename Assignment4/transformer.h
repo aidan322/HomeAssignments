@@ -13,7 +13,14 @@ public:
     Transformer(std::string name, int powerLevel);
     virtual ~Transformer() {}
 
+    std::string getName() const;
+    int getPowerLevel() const;
+
     virtual void transform() const = 0;
+    virtual void openFire() const = 0;
+    virtual void ultimate() const = 0;
+    virtual void recharge() const = 0;
+    virtual void statusReport() const = 0;
     friend std::ostream& operator<<(std::ostream& os, const Transformer& t);
     bool operator>(const Transformer& other) const;
     bool operator<(const Transformer& other) const;

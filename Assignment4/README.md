@@ -20,10 +20,10 @@ The following features were implemented:
 Each class is split into a '.cpp' and '.h' file, and all features are tested in 'main.cpp'.
 
 ## Build
-make
+make transformer4_test
 
 ## Run
-./transformers
+./transformer4_test
 
 ## Format
 astyle -A1 -s4 *.cpp *.h
