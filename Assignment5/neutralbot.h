@@ -10,6 +10,7 @@ public:
     void transform() const override;
     void openFire() const override;
     void ultimate() const override;
+    void ammo() const override;
 };
 
 #endif // NEUTRALBOT_H

@@ -10,10 +10,10 @@ st133061@student.spbu.ru
 This assignment extends Assignment 3 and 4 by introducing virtual methods 'ammo', 'openFire' and 'ultimate' int the 'Transformers' class. These methods are overriden in 'Autobot' and 'Decepticon'. I test the behavior explicitly and via vase class pointers.
 
 ## Build
-make
+make transformer5_test
 
 ## Run
-./transformers
+./transformer5_test
 
 ## Clean
 
