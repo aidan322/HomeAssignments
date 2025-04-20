@@ -12,11 +12,11 @@ Assignment 3 - "Transformers" clas hierarchy.
 
 ## Build
 
-make
+make transformer_test
 
 ## Run
 
-./transformers
+./transformer_test
 
 ## Clean
 
