@@ -1,8 +1,12 @@
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall -Werror -Wpedantic
 
- 
-all: main.o 
-	g++ main.o -o project2
+all: project2
+
+project2: main.o
+	$(CXX) $(CXXFLAGS)  main.o -o project2
+
 main.o: main.cpp
-	g++ -c main.cpp
-clean: 
+	$(CXX) $(CXXFLAGS) -c main.cpp
+clean:
 	rm -rf *.o project2
