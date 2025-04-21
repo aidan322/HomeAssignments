@@ -7,10 +7,15 @@
 st133061@student.spbu.ru
 
 ## Description
-Home assignment 2b - Stack and RPN Calculator.
-This program implements a stack using a dynamic array.
-It also calculates expressions written in Reverse Polish Notation.
+This assignment implements Reverse Polish Notation (RPN) using a manually managed array-based stack.
+The program read a string of numbers nad operations ('+', '-', '*', '/') seperated by spaces and calculates the result using RPN logic.
 
 ## Build
+make
 
 ## RUN
+echo "5 1 2 + 4 * + 3 -" | ./rpn
+result: 14
+
+## Clean
+make clean

@@ -1,6 +1,13 @@
-all: main.o 
-	g++ main.o -o project3
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall -Werror -Wpedantic
+
+all: rpn
+
+rpn: main.o
+	$(CXX) $(CXXFLAGS)  main.o -o rpn
+
 main.o: main.cpp
-	g++ -c main.cpp
-clean: 
-	rm -rf *.o project3
+	$(CXX) $(CXXFLAGS) -c main.cpp
+
+clean:
+	rm -rf *.o rpn
