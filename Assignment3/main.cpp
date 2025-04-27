@@ -3,8 +3,8 @@
 #include <iostream>
 
 int main() {
-    Autobot optimus("Optimus Prime", 95, "Leadership");
-    Decepticon megatron("Megatron", 98, 100);
+    Autobot optimus("Optimus Prime", 95, "Leadership", nullptr);
+    Decepticon megatron("Megatron", 98, 100, nullptr);
 
     std::cout << optimus.getName() << " is an " << optimus.getType() << " with power level " << optimus.getPowerLevel() << " and ability: " << optimus.getSpecialAbility() << std::endl;
     optimus.transform();

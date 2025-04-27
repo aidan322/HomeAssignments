@@ -5,7 +5,7 @@
 class TestTransformer : public Transformer {
 public:
     TestTransformer(const std::string& name, const std::string& type, int power, bool isAutobot) 
-        : Transformer(name, type, power, isAutobot) {}
+        : Transformer(name, type, power, isAutobot, nullptr) {}
 
     void transform() const override {}
     void openFire() const override {}

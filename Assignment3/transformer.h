@@ -14,7 +14,7 @@ protected:
     Base* base = nullptr;
 
 public:
-    Transformer(const std::string& name, const std::string& type, int powerLevel, bool isAutobot);
+    Transformer(const std::string& name, const std::string& type, int powerLevel, bool isAutobot, Base* basePtr = nullptr);
     virtual ~Transformer();
 
     std::string getName() const;
@@ -28,6 +28,8 @@ public:
 
     bool getIsAutobot() const;
     void setIsAutobot(bool newIsAutobot);
+
+    void setBase(Base* newBase);
 
     virtual void transform() const;
     virtual void recharge() const = 0;

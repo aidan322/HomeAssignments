@@ -16,8 +16,8 @@ void Transformer::statusReport() const {
     }
 }
 
-Transformer::Transformer(const std::string& name, const std::string& type, int powerLevel, bool isAutobot)
-    : name(name), type(type), powerLevel(powerLevel), isAutobot(isAutobot) {}
+Transformer::Transformer(const std::string& name, const std::string& type, int powerLevel, bool isAutobot, Base* basePtr)
+    : name(name), type(type), powerLevel(powerLevel), isAutobot(isAutobot), weapon("Laser", 100), base(basePtr) {}
 
 Transformer::~Transformer() {}
 
