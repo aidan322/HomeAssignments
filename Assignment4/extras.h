@@ -3,7 +3,8 @@
 
 #include <string>
 
-class Weapon {
+class Weapon
+{
 public:
     std::string type;
     int damage;
@@ -11,7 +12,8 @@ public:
     Weapon(const std::string& t = "Laser", int d = 100) : type(t), damage(d) {}
 };
 
-class Base {
+class Base
+{
 public:
     std::string location;
 

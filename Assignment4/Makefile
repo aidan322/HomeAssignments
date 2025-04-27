@@ -14,7 +14,7 @@ $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) transformer_test.o
 
 cleanall: clean
-	rm -f $(TARGET)
+	rm -f $(TARGET) transformer4_test

@@ -18,10 +18,12 @@ bool Transformer::operator<(const Transformer& other) const
     return powerLevel < other.powerLevel;
 }
 
-std::string Transformer::getName() const {
+std::string Transformer::getName() const
+{
     return name;
 }
 
-int Transformer::getPowerLevel() const {
+int Transformer::getPowerLevel() const
+{
     return powerLevel;
 }

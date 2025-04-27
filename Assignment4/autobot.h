@@ -10,7 +10,10 @@ private:
 public:
     Autobot(std::string name, int powerLevel, std::string ability);
     void transform() const override;
-
+    void openFire() const override;
+    void ultimate() const override;
+    void recharge() const override;
+    void statusReport() const override;
 };
 
 #endif // AUTOBOT_H
