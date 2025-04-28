@@ -7,9 +7,9 @@ transformer5_test: transformer5_test.o transformer.o autobot.o decepticon.o neut
 	$(CXX) $(CXXFLAGS) -o transformer5_test transformer5_test.o transformer.o autobot.o decepticon.o neutralbot.o -lgtest -lgtest_main -pthread
 
 $(TARGET): $(OBJS)
-	$(CXX) $(CSSFLAGS) -o $(TARGET) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
 
-%.0: %.cpp
+%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
