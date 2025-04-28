@@ -14,8 +14,8 @@ The program read a string of numbers nad operations ('+', '-', '*', '/') seperat
 make
 
 ## RUN
-echo "5 1 2 + 4 * + 3 -" | ./rpn
-result: 14
+echo "1 2 + 4 * 3 +" | ./rpn
+result: 15
 
 ## Clean
 make clean
