@@ -22,8 +22,8 @@ public:
     virtual void recharge() const = 0;
     virtual void statusReport() const = 0;
     friend std::ostream& operator<<(std::ostream& os, const Transformer& t);
-    bool operator>(const Transformer& other) const;
-    bool operator<(const Transformer& other) const;
+    virtual bool operator>(const Transformer& other) const;
+    virtual bool operator<(const Transformer& other) const;
 };
 
 

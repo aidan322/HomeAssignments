@@ -1,7 +1,7 @@
 #include "decepticon.h"
 
-Decepticon::Decepticon(std::string name, int powerLevel, int evilness)
-    : Transformer(name, powerLevel), evilness(evilness) {}
+Decepticon::Decepticon(std::string name, int powerLevel, int evilness, int cruelty)
+    : Transformer(name, powerLevel), evilness(evilness), cruelty(cruelty) {}
 
 void Decepticon::transform() const
 {
@@ -25,4 +25,12 @@ void Decepticon::statusReport() const
 
 void Decepticon::openFire() const {
     std::cout << name << " fires deceptively!" << std::endl;
+}
+
+bool Decepticon::operator>(const Decepticon& other) const {
+    return cruelty > other.cruelty;
+}
+
+bool Decepticon::operator<(const Decepticon& other) const {
+    return cruelty < other.cruelty;
 }

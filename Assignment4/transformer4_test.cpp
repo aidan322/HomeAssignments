@@ -45,16 +45,6 @@ TEST(TransformerTest4, MethodsExist)
     EXPECT_TRUE(output2.find("has no assigned base") != std::string::npos);
 }
 
-TEST(TransformerTest4, ComparisonOperators) {
-    Autobot t1("Optimus", 10, "Leadership");
-    Decepticon t2("Megatron", 8, 100);
-    Autobot t3("Optimus", 10, "Leadership");
-
-    EXPECT_TRUE(t1 > t2);
-    EXPECT_FALSE(t2 > t1);
-    EXPECT_TRUE(t2 < t1);
-}
-
 TEST(TransformerTest4, OutputOperator) {
     TestTransformer t("Bumblebee", 7);
     std::ostringstream oss;
@@ -63,4 +53,26 @@ TEST(TransformerTest4, OutputOperator) {
 
     EXPECT_NE(output.find("Bumblebee"), std::string::npos);
     EXPECT_NE(output.find("7"), std::string::npos);
+}
+
+TEST(TransformerTest4, DecepticonComparisonOperators) {
+    Decepticon d1("Shochwave", 90, 85, 60);
+    Decepticon d2("Barricade", 88, 80, 50);
+    Decepticon d3("Soundwave", 87, 70, 60);
+
+    EXPECT_TRUE(d1 > d2);
+    EXPECT_FALSE(d2 > d1);
+    EXPECT_TRUE(d2 < d1);
+    EXPECT_FALSE(d1 < d3);
+}
+
+TEST(TransformerTest4, AutobotComparisonOperators) {
+    Autobot a1("Optimus", 90, "Leadership", 10);
+    Autobot a2("Bumblebee", 80, "Speed", 5);
+    Autobot a3("Jazz", 85, "Stealth", 10);
+
+    EXPECT_TRUE(a1 > a2);
+    EXPECT_FALSE(a2 > a1);
+    EXPECT_TRUE(a2 < a1);
+    EXPECT_FALSE(a1 < a3);
 }

@@ -1,7 +1,7 @@
 #include "autobot.h"
 
-Autobot::Autobot(std::string name, int powerLevel, std::string ability)
-    : Transformer(name, powerLevel), ability(ability) {}
+Autobot::Autobot(std::string name, int powerLevel, std::string ability, int rank)
+    : Transformer(name, powerLevel), ability(ability), rank(rank) {}
 
 void Autobot::transform() const
 {
@@ -21,4 +21,18 @@ void Autobot::statusReport() const {
 
 void Autobot::recharge() const {
     std::cout << name << " is recharging heroic energy..." << std::endl;
+}
+
+bool Autobot::operator>(const Transformer& other) const {
+    const Autobot* otherAutobot = dynamic_cast<const Autobot*>(&other);
+    if (otherAutobot)
+        return rank > otherAutobot->rank;
+    return Transformer::operator>(other);  // fallback
+}
+
+bool Autobot::operator<(const Transformer& other) const {
+    const Autobot* otherAutobot = dynamic_cast<const Autobot*>(&other);
+    if (otherAutobot)
+        return rank < otherAutobot->rank;
+    return Transformer::operator<(other);  // fallback
 }
